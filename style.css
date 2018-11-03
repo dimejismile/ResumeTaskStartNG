@@ -10,7 +10,7 @@ body {
   color: #fff;
   margin: 0;
   font-size: 0.965em;
-  font-family: 'Poppins', Bell-MT, sans-serif;
+  font-family: sans-serif;
 }
 
 header {
@@ -19,6 +19,7 @@ header {
   margin: auto;
   margin-top: 50px;
   background: linear-gradient(0deg, rgb(31, 31, 122), rgb(16, 16, 61));
+  background: linear-gradient(-45deg, rgba(31, 31, 122, 0.7), rgba(16, 16, 61, 0.5)), url(./images/bg.jpg);
   box-shadow: 0 2px 18px 9px rgba(0, 0, 0, 0.25);
 }
 
@@ -113,8 +114,14 @@ header .pcast-wrapper {
   float: right;
   width: 500px;
 }
-
+.pcast-wrapper h3 {
+  text-align: right;
+  margin-right: 100px;
+  font-size: 15px;
+  letter-spacing: 3px;
+}
 .pcast-wrapper .pcast-content {
+  clear: both;
   width: 200px;
   height: 200px;
   padding: 20px;
@@ -128,7 +135,7 @@ header .pcast-wrapper {
 .pcast-wrapper .pcast-content:hover {
   background: rgba(16, 16, 61, 0.4);
   background: #ff3300;
-  color: #1a1a1a;
+  color: #fff;
   cursor: pointer;
 }
 .pcast-content .episode {
@@ -316,4 +323,60 @@ progress[value]::-webkit-progress-value  {
   text-align: left;
   font-size: 12px;
   line-height: 15px;
+}
+
+/*Responsive*/
+@media screen and (max-width: 900px) {
+  header {
+  width: 90%;
+  height: 600px;
+  margin: auto;
+  margin-top: 50px;
+  background: linear-gradient(0deg, rgb(31, 31, 122), rgb(16, 16, 61));
+  background: linear-gradient(-45deg, rgba(31, 31, 122, 0.7), rgba(16, 16, 61, 0.5)), url(./images/bg.jpg);
+  box-shadow: 0 2px 18px 9px rgba(0, 0, 0, 0.25);
+}
+  nav .navbar ul{
+  float: right;
+  list-style-type: none;
+  margin-right: 100px;
+}
+.navbar ul li {
+  display: inline-block;
+  margin-right: 30px;
+}
+nav .logo a{
+  float: left;
+  text-decoration: none;
+  margin-left: 30px;
+  letter-spacing: 2;
+  color: #fff;
+  font-size: 20px;
+}
+header .pcast-wrapper {
+  top: 0;
+  margin: 10px auto;
+  position: relative;
+  width: 100%;
+  right: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.pcast-wrapper .pcast-content {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  background: rgba(16, 16, 61, 0.4);
+  background: #ff3300a1;
+  overflow: hidden;
+  display: inline-block;
+  margin: 3px;
+  box-shadow: 1px 2px 11px 0px #0d0d29;
+  transition: 1s all ease-out;
+}
+.pcast-wrapper .first-pod {
+  background: #ff6666;
+  color: #1a1a1a;
+}
 }
