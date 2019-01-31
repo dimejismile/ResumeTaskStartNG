@@ -5,34 +5,31 @@
   padding: 0;
 }
 
-body {
-  background: #101011;
-  color: #fff;
+html, body {
+  background: #1E1E1E;
+  color: #E5E5E5;
   margin: 0;
+  width: 100%;
   font-size: 0.965em;
   font-family: sans-serif;
 }
 
 header {
-  width: 90%;
+  width: 1200px;
   height: 600px;
-  margin: auto;
-  margin-top: 50px;
+  margin: 0 auto;
+  margin-top: 70px;
   background: linear-gradient(0deg, rgb(31, 31, 122), rgb(16, 16, 61));
   background: linear-gradient(-45deg, rgba(31, 31, 122, 0.7), rgba(16, 16, 61, 0.5)), url(./images/bg.jpg);
   box-shadow: 0 2px 18px 9px rgba(0, 0, 0, 0.25);
 }
 
 header nav {
-  margin-top: 20px;
-  display: inline-block;
   background: transparent;
   color: white;
   top: 0;
   height: 60px;
-  line-height: 60px;
-  width: 100vw;
-  z-index: 10;
+  line-height: 80px;
 }
 
 nav .logo a{
@@ -47,12 +44,12 @@ nav .logo a{
 nav .navbar ul{
   float: right;
   list-style-type: none;
-  margin-right: 150px;
+  margin-right: 60px;
 }
 
 .navbar ul li {
   display: inline-block;
-  margin-right: 50px;
+  padding: 5px;
 }
 
 .navbar ul li a {
@@ -198,11 +195,11 @@ button {
   transition: 2s ease-in-out;
 }
 .modal-content .modal-box-one {
-  padding-top: 100px;
+  padding-top: 10%;
   background-color: #f25555;
   width: 50%;
   height: 100%;
-  overflow: auto;
+  overflow: hidden;
 }
 .modal-content .modal-box-two {
   padding: 20px;
@@ -245,7 +242,7 @@ button {
 }
 /*Podcast (pcast player) CSS Styling*/
 .pcast-player .pcast-player-controls{
-    margin-top: 122px;
+    margin-top: 137px;
     box-sizing: border-box;
     background: #d4393994;
     color: #fff;
@@ -304,8 +301,9 @@ progress[value]::-webkit-progress-value  {
 }
 .modal-content .modal-box-two .modal-box-two-content{
   margin-top: 200px;
-  margin-left: 100px;
-  width: 200px;
+  margin-left: 80px;
+  width: 250px;
+  text-align: left;
 }
 .line {
   margin-top: 20px;
@@ -316,7 +314,8 @@ progress[value]::-webkit-progress-value  {
 .modal-box-two-content h3 {
   text-transform: uppercase;
   font-size: 13px;
-  padding: 10px 0px 20px 0px;
+  padding: 10px 0px;
+  text-align: left;
 }
 .modal-box-two-content p {
   color: #dfdfe4;
@@ -379,4 +378,96 @@ header .pcast-wrapper {
   background: #ff6666;
   color: #1a1a1a;
 }
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal .modal-content {
+  transform: ease-in;
+  position: relative;
+  width: 80%;
+  height: 70%;
+  display: inline-block;
+  box-shadow: 1px 2px 11px 0px #0d0d29;
+  margin: 10% auto;
+  transition: 2s ease-in-out;
+}
+}
+/**Main Content<main></main> Cascading Style Sheet**/
+main {
+  background: #E5E5E5;
+  color: #1E1E1E;
+  margin-top: 100px;
+}
+main .recommend-box {
+  width: 900px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.recommend-box h1 {
+  color: blue;
+  text-align: center;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 64px;
+  padding-top: 50px;
+}
+.circle-bottom {
+  margin: 0 auto;
+}
+.circle {
+  float: left;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50px;
+}
+.circles {
+  width: 30px;
+  height: 30px;
+  background: blue;
+  border-radius: 50px;
+  margin: 20px;
+  z-index: 1;
+}
+.Trending-Episodes {
+  width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.trend-epis img{
+  width: 250px;
+  height: 250px;
+  margin: 20px;
+  background-position: center;
+  background-size: contain;
+  overflow: hidden;
+  transition: all 1s ;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 14px 4px rgba(2, 10, 0, 0.25);
+}
+.trend-epis img:hover {
+  border-left: 1px solid #eee;
+  margin: 10px;
+  box-shadow: 0 2px 18px 9px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.trend-epis .trend-epis-info {
+  width: 250px;
+  margin: 5px;
+}
+.trend-epis-info p, h3 {
+  padding: 10px;
 }
