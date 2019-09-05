@@ -27,7 +27,7 @@ body {
 .intro-speech .name {
 	color: #FEC62F;
 	letter-spacing: 2px;
-	font-size: 50px;
+	font-size: 40px;
 }
 .thin {
 	font-weight: lighter;
@@ -62,7 +62,7 @@ body {
 }
 .intro-speech .text-header .role{
 	letter-spacing: 2px;
-	font-size: 25px;
+	font-size: 20px;
 }
 .intro-speech .picture img{
 	width: 400px;
@@ -240,18 +240,21 @@ form button:hover {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	box-sizing: border-box;
 }
 
 .contact-link a {
 	text-decoration: none;
 	color: inherit;
-	margin: 20px;
-	padding: 20px;
 	text-transform: uppercase;
+}
+.contact-link .padding {
+	padding: 10px;
 }
 .download {
 	background-color: #FEC62F;
 	border-radius: 10px;
+	margin: 20px;
 	padding: 20px;
 	box-shadow: 2px 5px 6px #C2C1C2;
 }
